@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "elven_bow"
+display_name = "精灵长弓"
+description = "以精灵工艺打造的长弓。"
+item_class = 0
+slot = 6
+stats_bonus = {"phys_atk": 24, "technique": 14}
+precious_value = 70
+sell_price = 380
+usable_in_battle = false
+art_placeholder = "#5DCAA5"

@@ -1,0 +1,32 @@
+# Godot 4
+.godot/
+.import/
+export.cfg
+export_presets.cfg
+*.translation
+
+# 导出的游戏本体（上百 MB，不入版本库）
+导出/
+新建文件夹/
+*.pck
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# 版权字体（微软雅黑 / 黑体，不可公开分发）
+assets/fonts/*.ttc
+assets/fonts/*.ttf
+
+# WorkBuddy 工作区（含会话记录，不入库）
+.workbuddy/

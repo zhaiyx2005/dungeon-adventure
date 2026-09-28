@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "radiant_crystal"
+display_name = "光辉水晶"
+description = "内部流转着光辉的晶体。"
+item_class = 2
+slot = 7
+stats_bonus = {}
+precious_value = 70
+sell_price = 300
+usable_in_battle = false
+art_placeholder = "#B5D4F4"

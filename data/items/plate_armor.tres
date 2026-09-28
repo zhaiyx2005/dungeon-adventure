@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "plate_armor"
+display_name = "板甲"
+description = "全身覆盖的重甲。"
+item_class = 0
+slot = 2
+stats_bonus = {"hp": 60, "phys_res": 18}
+precious_value = 60
+sell_price = 180
+usable_in_battle = false
+art_placeholder = "#5F5E5A"

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "insight"
+display_name = "洞察"
+description = "抽 2 张牌。"
+card_class = 2
+damage_type = 0
+action_cost = 1
+mana_cost = 0
+target_type = 4
+rarity = 0
+effect_tags = ["DRAW"]
+art_placeholder = "#F4C0D1"

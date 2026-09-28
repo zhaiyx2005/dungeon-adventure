@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "mana_potion"
+display_name = "回蓝瓶"
+description = "恢复少量蓝量。"
+item_class = 1
+slot = 7
+stats_bonus = {}
+precious_value = 5
+sell_price = 15
+usable_in_battle = true
+art_placeholder = "#378ADD"

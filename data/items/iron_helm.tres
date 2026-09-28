@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "iron_helm"
+display_name = "铁盔"
+description = "厚重的铁制头盔。"
+item_class = 0
+slot = 0
+stats_bonus = {"phys_res": 8, "hp": 20}
+precious_value = 20
+sell_price = 25
+usable_in_battle = false
+art_placeholder = "#888780"

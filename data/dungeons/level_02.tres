@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="DungeonData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/dungeon_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "level_02"
+display_name = "幽暗回廊"
+level_index = 2
+danger_rating = 1
+recommend_power_min = 150
+recommend_power_max = 220
+entry_cost = 100
+grid_cols = 3
+grid_rows = 7
+node_weight_battle = 70
+node_weight_treasure = 10
+node_weight_event = 20
+monster_pool = ["hobgoblin", "dire_wolf", "cave_spider"]
+elite_pool = ["hobgoblin_captain"]
+boss_id = "goblin_chief"
+bg_placeholder = "#E6F1FB"

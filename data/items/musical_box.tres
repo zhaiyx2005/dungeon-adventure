@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "musical_box"
+display_name = "八音盒"
+description = "打开会响起陌生旋律。"
+item_class = 2
+slot = 7
+stats_bonus = {}
+precious_value = 40
+sell_price = 120
+usable_in_battle = false
+art_placeholder = "#ED93B1"

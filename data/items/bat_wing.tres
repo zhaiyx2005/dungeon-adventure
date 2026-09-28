@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "bat_wing"
+display_name = "吸血蝙蝠翅膀"
+description = "薄如蝉翼的黑色翅膀。"
+item_class = 3
+slot = 7
+stats_bonus = {}
+precious_value = 12
+sell_price = 15
+usable_in_battle = false
+art_placeholder = "#AFA9EC"

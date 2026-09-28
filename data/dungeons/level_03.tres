@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="DungeonData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/dungeon_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "level_03"
+display_name = "深渊裂口"
+level_index = 3
+danger_rating = 2
+recommend_power_min = 300
+recommend_power_max = 420
+entry_cost = 400
+grid_cols = 3
+grid_rows = 7
+node_weight_battle = 70
+node_weight_treasure = 10
+node_weight_event = 20
+monster_pool = ["ogre", "dark_knight", "wraith", "basilisk"]
+elite_pool = ["troll"]
+boss_id = "abyss_warden"
+bg_placeholder = "#EFE9FE"

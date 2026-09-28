@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "torn_notebook"
+display_name = "残破的笔记本"
+description = "字迹模糊，只剩几页可读。"
+item_class = 4
+slot = 7
+stats_bonus = {}
+precious_value = 3
+sell_price = 3
+usable_in_battle = false
+art_placeholder = "#D3D1C7"

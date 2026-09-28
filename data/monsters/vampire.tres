@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "vampire"
+display_name = "吸血鬼"
+description = "以鲜血维生的贵族亡灵。"
+hp = 140
+phys_atk = 46
+mag_atk = 30
+phys_res = 22
+mag_res = 24
+technique = 22
+monster_tier = 0
+dungeon_level = 4
+ai_pattern = 1
+drop_table = "vampire_drop"
+art_placeholder = "#993556"

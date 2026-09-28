@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "mage_hood"
+display_name = "法师兜帽"
+description = "织入符文的兜帽，提升法力。"
+item_class = 0
+slot = 0
+stats_bonus = {"mag_res": 10, "mana": 15}
+precious_value = 35
+sell_price = 60
+usable_in_battle = false
+art_placeholder = "#85B7EB"

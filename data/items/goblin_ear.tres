@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "goblin_ear"
+display_name = "地精耳朵"
+description = "尖长的绿色耳朵。"
+item_class = 3
+slot = 7
+stats_bonus = {}
+precious_value = 8
+sell_price = 10
+usable_in_battle = false
+art_placeholder = "#97C459"

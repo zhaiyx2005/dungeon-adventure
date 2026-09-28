@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "hobgoblin"
+display_name = "大地精"
+description = "比地精更强壮、更有组织的战士。"
+hp = 68
+phys_atk = 20
+mag_atk = 0
+phys_res = 12
+mag_res = 8
+technique = 6
+monster_tier = 0
+dungeon_level = 2
+ai_pattern = 0
+drop_table = "hobgoblin_drop"
+art_placeholder = "#97C459"

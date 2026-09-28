@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "demon_horn"
+display_name = "恶魔之角"
+description = "散发不祥气息的弯角。"
+item_class = 3
+slot = 7
+stats_bonus = {}
+precious_value = 85
+sell_price = 450
+usable_in_battle = false
+art_placeholder = "#712B13"

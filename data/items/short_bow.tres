@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "short_bow"
+display_name = "短弓"
+description = "猎人常用的短弓。"
+item_class = 0
+slot = 6
+stats_bonus = {"phys_atk": 7, "technique": 4}
+precious_value = 8
+sell_price = 10
+usable_in_battle = false
+art_placeholder = "#D3D1C7"

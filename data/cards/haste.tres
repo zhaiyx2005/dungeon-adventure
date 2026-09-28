@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "haste"
+display_name = "疾行"
+description = "使一名队友立即获得额外行动值。"
+card_class = 2
+damage_type = 1
+action_cost = 1
+mana_cost = 8
+target_type = 0
+rarity = 1
+effect_tags = ["BUFF_ACTION"]
+art_placeholder = "#F4C0D1"

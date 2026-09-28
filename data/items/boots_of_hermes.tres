@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "boots_of_hermes"
+display_name = "神行之腿甲"
+description = "让穿戴者步履如飞。"
+item_class = 0
+slot = 4
+stats_bonus = {"action": 4, "phys_res": 10}
+precious_value = 85
+sell_price = 500
+usable_in_battle = false
+art_placeholder = "#FAC775"

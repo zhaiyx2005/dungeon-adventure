@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "abyss_lord"
+display_name = "深渊领主"
+description = "自深渊裂隙中降下的灾厄。"
+hp = 1500
+phys_atk = 85
+mag_atk = 70
+phys_res = 50
+mag_res = 46
+technique = 30
+monster_tier = 2
+dungeon_level = 5
+ai_pattern = 0
+drop_table = "abyss_drop"
+art_placeholder = "#501313"

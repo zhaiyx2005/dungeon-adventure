@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "wind_blade"
+display_name = "风刃"
+description = "造成 1.0 倍法术伤害，蓝耗低，适合连打。"
+card_class = 0
+damage_type = 1
+multiplier = 1.0
+action_cost = 1
+mana_cost = 6
+target_type = 1
+rarity = 0
+effect_tags = []
+art_placeholder = "#85B7EB"

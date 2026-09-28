@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="DungeonData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/dungeon_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "level_01"
+display_name = "新手地穴"
+level_index = 1
+danger_rating = 0
+recommend_power_min = 60
+recommend_power_max = 100
+entry_cost = 0
+grid_cols = 3
+grid_rows = 7
+node_weight_battle = 70
+node_weight_treasure = 10
+node_weight_event = 20
+monster_pool = ["boar", "cave_bat", "goblin", "giant_rat"]
+elite_pool = []
+boss_id = "boar_king"
+bg_placeholder = "#F1EFE8"

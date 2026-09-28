@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "rune_frost"
+display_name = "霜之符文"
+description = "与同组组件同回合打出，本卡无直接效果。"
+card_class = 2
+damage_type = 1
+action_cost = 0
+mana_cost = 2
+target_type = 4
+rarity = 1
+effect_tags = ["COMBO"]
+art_placeholder = "#9FE1CB"
+combo_key = "frost_thunder"
+combo_name = "霜雷裁决"
+combo_part = "frost"
+combo_complete = ["frost", "thunder"]
+combo_multiplier = 0.0
+combo_desc = "解锁「霜雷裁决」"
+combo_payoff = false

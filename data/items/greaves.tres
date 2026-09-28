@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "greaves"
+display_name = "胫甲"
+description = "保护小腿的金属护具。"
+item_class = 0
+slot = 4
+stats_bonus = {"phys_res": 6, "hp": 15}
+precious_value = 24
+sell_price = 35
+usable_in_battle = false
+art_placeholder = "#888780"

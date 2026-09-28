@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "dragon_scale"
+display_name = "龙鳞甲"
+description = "以幼龙鳞片打造的甲胄。"
+item_class = 0
+slot = 2
+stats_bonus = {"hp": 90, "phys_res": 22, "mag_res": 15}
+precious_value = 95
+sell_price = 800
+usable_in_battle = false
+art_placeholder = "#E24B4A"

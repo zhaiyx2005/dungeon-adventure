@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "hobgoblin_captain"
+display_name = "大地精队长"
+description = "率领地精部队的指挥官。"
+hp = 140
+phys_atk = 26
+mag_atk = 8
+phys_res = 16
+mag_res = 12
+technique = 12
+monster_tier = 1
+dungeon_level = 2
+ai_pattern = 0
+drop_table = "captain_drop"
+art_placeholder = "#854F0B"

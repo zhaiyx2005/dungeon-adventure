@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "fireball"
+display_name = "烈焰术"
+description = "造成 2.0 倍法术伤害。"
+card_class = 0
+damage_type = 1
+multiplier = 2.0
+action_cost = 1
+mana_cost = 15
+target_type = 1
+rarity = 2
+effect_tags = []
+art_placeholder = "#D85A30"

@@ -1,0 +1,338 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbattlescene001"]
+
+[ext_resource type="Script" uid="uid://cw8nhhw2ndrbv" path="res://scripts/battle/battle_scene.gd" id="1_scene"]
+[ext_resource type="Theme" uid="uid://cnq7theme00001" path="res://assets/theme_main.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bf"]
+bg_color = Color(0.909804, 0.901961, 0.870588, 1)
+
+[node name="BattleScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_scene")
+
+[node name="Root" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" type="PanelContainer" parent="Root"]
+layout_mode = 2
+
+[node name="TopMargin" type="MarginContainer" parent="Root/TopBar"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 6
+
+[node name="TopRow" type="HBoxContainer" parent="Root/TopBar/TopMargin"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="RoundLabel" type="Label" parent="Root/TopBar/TopMargin/TopRow"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "第 1 回合"
+
+[node name="PhaseLabel" type="Label" parent="Root/TopBar/TopMargin/TopRow"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.231373, 0.427451, 0.0666667, 1)
+theme_override_font_sizes/font_size = 18
+text = "我方回合"
+
+[node name="Spacer" type="Control" parent="Root/TopBar/TopMargin/TopRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HintLabel" type="Label" parent="Root/TopBar/TopMargin/TopRow"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.39, 0.36, 1)
+theme_override_font_sizes/font_size = 14
+text = "点下方的成员卡选择释放者"
+
+[node name="Middle" type="HBoxContainer" parent="Root"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="Battlefield" type="Panel" parent="Root/Middle"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_bf")
+
+[node name="FieldMargin" type="MarginContainer" parent="Root/Middle/Battlefield"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="FieldRow" type="HBoxContainer" parent="Root/Middle/Battlefield/FieldMargin"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="AllyBox" type="VBoxContainer" parent="Root/Middle/Battlefield/FieldMargin/FieldRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AllyTitle" type="Label" parent="Root/Middle/Battlefield/FieldMargin/FieldRow/AllyBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.231373, 0.427451, 0.0666667, 1)
+theme_override_font_sizes/font_size = 15
+text = "我方小队"
+
+[node name="AllyTopSpacer" type="Control" parent="Root/Middle/Battlefield/FieldMargin/FieldRow/AllyBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AllyRow" type="HBoxContainer" parent="Root/Middle/Battlefield/FieldMargin/FieldRow/AllyBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="AllyBottomSpacer" type="Control" parent="Root/Middle/Battlefield/FieldMargin/FieldRow/AllyBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Divider" type="VBoxContainer" parent="Root/Middle/Battlefield/FieldMargin/FieldRow"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="DividerSpacerTop" type="Control" parent="Root/Middle/Battlefield/FieldMargin/FieldRow/Divider"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Swords" type="Label" parent="Root/Middle/Battlefield/FieldMargin/FieldRow/Divider"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.53, 0.48, 1)
+theme_override_font_sizes/font_size = 40
+text = "⚔"
+
+[node name="DividerSpacerBottom" type="Control" parent="Root/Middle/Battlefield/FieldMargin/FieldRow/Divider"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="EnemyBox" type="VBoxContainer" parent="Root/Middle/Battlefield/FieldMargin/FieldRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="EnemyTitle" type="Label" parent="Root/Middle/Battlefield/FieldMargin/FieldRow/EnemyBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.752941, 0.223529, 0.168627, 1)
+theme_override_font_sizes/font_size = 15
+text = "敌方"
+
+[node name="EnemyTopSpacer" type="Control" parent="Root/Middle/Battlefield/FieldMargin/FieldRow/EnemyBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="EnemyRow" type="HBoxContainer" parent="Root/Middle/Battlefield/FieldMargin/FieldRow/EnemyBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="EnemyBottomSpacer" type="Control" parent="Root/Middle/Battlefield/FieldMargin/FieldRow/EnemyBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RightRail" type="PanelContainer" parent="Root/Middle"]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+
+[node name="RailMargin" type="MarginContainer" parent="Root/Middle/RightRail"]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="RailBox" type="VBoxContainer" parent="Root/Middle/RightRail/RailMargin"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="DeckLabel" type="Label" parent="Root/Middle/RightRail/RailMargin/RailBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.25, 0.23, 1)
+theme_override_font_sizes/font_size = 14
+text = "抽牌堆
+0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DiscardLabel" type="Label" parent="Root/Middle/RightRail/RailMargin/RailBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.25, 0.25, 0.23, 1)
+theme_override_font_sizes/font_size = 14
+text = "弃牌堆
+0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DiscardButton" type="Button" parent="Root/Middle/RightRail/RailMargin/RailBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "手动弃牌"
+
+[node name="RailSpacer" type="Control" parent="Root/Middle/RightRail/RailMargin/RailBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="BagButton" type="Button" parent="Root/Middle/RightRail/RailMargin/RailBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+text = "背包"
+
+[node name="Bottom" type="PanelContainer" parent="Root"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 232)
+layout_mode = 2
+
+[node name="BottomMargin" type="MarginContainer" parent="Root/Bottom"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 6
+
+[node name="BottomRow" type="HBoxContainer" parent="Root/Bottom/BottomMargin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HandArea" type="VBoxContainer" parent="Root/Bottom/BottomMargin/BottomRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HandHeader" type="HBoxContainer" parent="Root/Bottom/BottomMargin/BottomRow/HandArea"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HandLabel" type="Label" parent="Root/Bottom/BottomMargin/BottomRow/HandArea/HandHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.39, 0.36, 1)
+theme_override_font_sizes/font_size = 13
+text = "手牌 0 / 12"
+
+[node name="HandHeaderSpacer" type="Control" parent="Root/Bottom/BottomMargin/BottomRow/HandArea/HandHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="EndTurnButton" type="Button" parent="Root/Bottom/BottomMargin/BottomRow/HandArea/HandHeader"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 34)
+layout_mode = 2
+text = "结束回合"
+
+[node name="HandSlot" type="Control" parent="Root/Bottom/BottomMargin/BottomRow/HandArea"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 186)
+layout_mode = 2
+size_flags_vertical = 3
+clip_contents = false
+
+[node name="LogPanel" type="PanelContainer" parent="Root/Bottom/BottomMargin/BottomRow"]
+custom_minimum_size = Vector2(300, 0)
+size_flags_horizontal = 0
+layout_mode = 2
+
+[node name="LogMargin" type="MarginContainer" parent="Root/Bottom/BottomMargin/BottomRow/LogPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 6
+
+[node name="LogBox" type="VBoxContainer" parent="Root/Bottom/BottomMargin/BottomRow/LogPanel/LogMargin"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="LogTitle" type="Label" parent="Root/Bottom/BottomMargin/BottomRow/LogPanel/LogMargin/LogBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.39, 0.36, 1)
+theme_override_font_sizes/font_size = 12
+text = "战斗记录"
+
+[node name="LogLabel" type="RichTextLabel" parent="Root/Bottom/BottomMargin/BottomRow/LogPanel/LogMargin/LogBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 12
+scroll_following = true
+
+[node name="ResultPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -220.0
+offset_top = -160.0
+offset_right = 220.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResultMargin" type="MarginContainer" parent="ResultPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 24
+
+[node name="ResultBox" type="VBoxContainer" parent="ResultPanel/ResultMargin"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="ResultLabel" type="Label" parent="ResultPanel/ResultMargin/ResultBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+text = "战斗胜利"
+horizontal_alignment = 1
+
+[node name="ResultDetail" type="Label" parent="ResultPanel/ResultMargin/ResultBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/line_spacing = 6
+theme_override_font_sizes/font_size = 15
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResultButton" type="Button" parent="ResultPanel/ResultMargin/ResultBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+text = "返回主菜单"

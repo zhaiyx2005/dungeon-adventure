@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "troll"
+display_name = "巨魔"
+description = "伤口会迅速愈合的怪物。"
+hp = 160
+phys_atk = 36
+mag_atk = 6
+phys_res = 24
+mag_res = 12
+technique = 8
+monster_tier = 1
+dungeon_level = 3
+ai_pattern = 0
+drop_table = "troll_drop"
+art_placeholder = "#3B6D11"

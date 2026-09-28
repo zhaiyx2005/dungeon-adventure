@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "dark_knight"
+display_name = "黑暗骑士"
+description = "背叛誓约的堕落骑士。"
+hp = 95
+phys_atk = 32
+mag_atk = 10
+phys_res = 22
+mag_res = 16
+technique = 10
+monster_tier = 0
+dungeon_level = 3
+ai_pattern = 0
+drop_table = "knight_drop"
+art_placeholder = "#5F5E5A"

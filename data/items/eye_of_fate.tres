@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "eye_of_fate"
+display_name = "命运之眼"
+description = "能窥见命运轨迹的宝石。"
+item_class = 0
+slot = 1
+stats_bonus = {"technique": 15, "luck": 6, "mag_atk": 8}
+precious_value = 75
+sell_price = 350
+usable_in_battle = false
+art_placeholder = "#AFA9EC"

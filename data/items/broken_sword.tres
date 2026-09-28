@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "broken_sword"
+display_name = "破旧的剑"
+description = "已经折断无法使用的剑。"
+item_class = 4
+slot = 7
+stats_bonus = {}
+precious_value = 2
+sell_price = 2
+usable_in_battle = false
+art_placeholder = "#B4B2A9"

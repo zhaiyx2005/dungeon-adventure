@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "greater_heal"
+display_name = "高级治愈术"
+description = "恢复相当于 3.5 倍智力的血量。"
+card_class = 2
+damage_type = 1
+heal_multiplier = 3.5
+action_cost = 1
+mana_cost = 20
+target_type = 0
+rarity = 2
+effect_tags = []
+art_placeholder = "#C0DD97"

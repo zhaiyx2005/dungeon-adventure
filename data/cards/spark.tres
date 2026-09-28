@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "spark"
+display_name = "火花术"
+description = "造成 0.5 倍法术伤害，蓝耗极低。"
+card_class = 0
+damage_type = 1
+multiplier = 0.5
+action_cost = 0
+mana_cost = 3
+target_type = 1
+rarity = 0
+effect_tags = []
+art_placeholder = "#D85A30"

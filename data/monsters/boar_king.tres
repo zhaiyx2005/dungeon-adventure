@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "boar_king"
+display_name = "野猪人王"
+description = "野猪人的首领，獠牙上挂着旧日冒险者的护符。"
+hp = 160
+phys_atk = 26
+mag_atk = 10
+phys_res = 9
+mag_res = 10
+technique = 8
+monster_tier = 2
+dungeon_level = 1
+ai_pattern = 0
+drop_table = "boar_king_drop"
+art_placeholder = "#993C1D"

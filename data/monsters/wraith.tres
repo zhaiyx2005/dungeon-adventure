@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "wraith"
+display_name = "幽魂"
+description = "由怨恨凝结而成的虚影。"
+hp = 80
+phys_atk = 12
+mag_atk = 34
+phys_res = 6
+mag_res = 22
+technique = 18
+monster_tier = 0
+dungeon_level = 3
+ai_pattern = 1
+drop_table = "wraith_drop"
+art_placeholder = "#AFA9EC"

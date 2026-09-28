@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "wolf_pelt"
+display_name = "狼皮"
+description = "厚实保暖的狼皮。"
+item_class = 3
+slot = 7
+stats_bonus = {}
+precious_value = 15
+sell_price = 22
+usable_in_battle = false
+art_placeholder = "#B4B2A9"

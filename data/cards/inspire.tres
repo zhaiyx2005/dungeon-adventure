@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "inspire"
+display_name = "激励"
+description = "使一名队友的行动值提升。"
+card_class = 2
+damage_type = 0
+action_cost = 1
+mana_cost = 0
+target_type = 0
+rarity = 0
+effect_tags = ["BUFF_ACTION"]
+art_placeholder = "#F4C0D1"

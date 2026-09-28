@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "weaken"
+display_name = "弱化"
+description = "使一名敌人的物抗大幅下降。"
+card_class = 2
+damage_type = 1
+action_cost = 1
+mana_cost = 8
+target_type = 1
+rarity = 1
+effect_tags = ["DEBUFF_DEFENSE"]
+art_placeholder = "#AFA9EC"

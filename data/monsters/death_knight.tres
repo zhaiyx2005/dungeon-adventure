@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "death_knight"
+display_name = "死亡骑士"
+description = "被诅咒束缚的传奇战士。"
+hp = 260
+phys_atk = 58
+mag_atk = 20
+phys_res = 36
+mag_res = 28
+technique = 18
+monster_tier = 1
+dungeon_level = 4
+ai_pattern = 0
+drop_table = "dk_drop"
+art_placeholder = "#2C2C2A"

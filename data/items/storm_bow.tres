@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "storm_bow"
+display_name = "风暴之弓"
+description = "拉弦时有雷鸣相伴。"
+item_class = 0
+slot = 6
+stats_bonus = {"phys_atk": 38, "technique": 20}
+precious_value = 94
+sell_price = 1100
+usable_in_battle = false
+art_placeholder = "#85B7EB"

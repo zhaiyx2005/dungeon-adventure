@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "goblin_chief"
+display_name = "地精酋长"
+description = "统御回廊的残暴统治者。"
+hp = 380
+phys_atk = 34
+mag_atk = 18
+phys_res = 20
+mag_res = 16
+technique = 12
+monster_tier = 2
+dungeon_level = 2
+ai_pattern = 0
+drop_table = "chief_drop"
+art_placeholder = "#3B6D11"

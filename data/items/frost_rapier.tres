@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "frost_rapier"
+display_name = "寒霜细剑"
+description = "剑身覆着永不融化的霜。"
+item_class = 0
+slot = 6
+stats_bonus = {"phys_atk": 20, "technique": 10}
+precious_value = 65
+sell_price = 260
+usable_in_battle = false
+art_placeholder = "#9FE1CB"

@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm0mainmenu0001"]
+
+[ext_resource type="Script" uid="uid://boaxsb72g1fmi" path="res://scripts/ui/main_menu.gd" id="1_menu"]
+[ext_resource type="Theme" uid="uid://cnq7theme00001" path="res://assets/theme_main.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
+bg_color = Color(0.945098, 0.937255, 0.909804, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_menu")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bg")
+
+[node name="GoldLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_top = 20.0
+offset_right = -28.0
+offset_bottom = 56.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.937255, 0.623529, 0.152941, 1)
+theme_override_font_sizes/font_size = 22
+text = "金币：0"
+horizontal_alignment = 2
+
+[node name="CenterBox" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VBox" type="VBoxContainer" parent="CenterBox"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="CenterBox/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 44
+text = "地牢冒险记"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterBox/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.39, 0.36, 1)
+theme_override_font_sizes/font_size = 15
+text = "卡牌构筑 · 地牢推进 · 队伍养成"
+horizontal_alignment = 1
+
+[node name="MenuBox" type="VBoxContainer" parent="CenterBox/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ToastLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -72.0
+offset_right = 300.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+modulate = Color(1, 1, 1, 0)
+theme_override_colors/font_color = Color(0.4, 0.39, 0.36, 1)
+theme_override_font_sizes/font_size = 17
+text = ""
+horizontal_alignment = 1

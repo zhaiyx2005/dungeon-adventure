@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "giant_rat"
+display_name = "巨鼠"
+description = "地牢下水道里肥硕的老鼠。"
+hp = 30
+phys_atk = 10
+mag_atk = 0
+phys_res = 2
+mag_res = 2
+technique = 5
+monster_tier = 0
+dungeon_level = 1
+ai_pattern = 0
+drop_table = "rat_drop"
+art_placeholder = "#B4B2A9"

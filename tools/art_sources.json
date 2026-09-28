@@ -1,0 +1,665 @@
+{
+  "_comment": "像素插画素材清单。字符串 = 相对 preview/art_raw 的文件；对象可指定 dir/base/key。base=asset 指 E:/goodot_work/地牢冒险记/图片素材/（用户自出的图，奶油底用 key=auto）。",
+  "card": {
+    "strike": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-21-47.png",
+      "dir": "art_v2"
+    },
+    "heavy_strike": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-22-08.png",
+      "dir": "art_v2"
+    },
+    "cleave": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-22-32.png",
+      "dir": "art_v2"
+    },
+    "quick_jab": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-22-56.png",
+      "dir": "art_v2"
+    },
+    "execute": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-23-48.png",
+      "dir": "art_v2"
+    },
+    "whirlwind": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-24-04.png",
+      "dir": "art_v2"
+    },
+    "shield_bash": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-24-19.png",
+      "dir": "art_v2"
+    },
+    "piercing_shot": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-24-35.png",
+      "dir": "art_v2"
+    },
+    "assassinate": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-24-48.png",
+      "dir": "art_v2"
+    },
+    "thunder": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-25-05.png",
+      "dir": "art_v2"
+    },
+    "fireball": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-25-25.png",
+      "dir": "art_v2"
+    },
+    "frost_bolt": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-25-59.png",
+      "dir": "art_v2"
+    },
+    "chain_lightning": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-26-14.png",
+      "dir": "art_v2"
+    },
+    "meteor": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-26-55.png",
+      "dir": "art_v2"
+    },
+    "arcane_missile": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-27-11.png",
+      "dir": "art_v2"
+    },
+    "holy_smite": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-27-29.png",
+      "dir": "art_v2"
+    },
+    "shadow_bolt": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-27-41.png",
+      "dir": "art_v2"
+    },
+    "drain_life": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-28-50.png",
+      "dir": "art_v2"
+    },
+    "spark": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-29-05.png",
+      "dir": "art_v2"
+    },
+    "wind_blade": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-29-22.png",
+      "dir": "art_v2"
+    },
+    "ice_shard": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-29-36.png",
+      "dir": "art_v2"
+    },
+    "static_bolt": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-29-55.png",
+      "dir": "art_v2"
+    },
+    "flame_wave": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-30-09.png",
+      "dir": "art_v2"
+    },
+    "guard_phys": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-30-29.png",
+      "dir": "art_v2"
+    },
+    "guard_mag": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-30-45.png",
+      "dir": "art_v2"
+    },
+    "iron_wall": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-31-01.png",
+      "dir": "art_v2"
+    },
+    "mana_barrier": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-31-15.png",
+      "dir": "art_v2"
+    },
+    "bulwark": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-31-31.png",
+      "dir": "art_v2"
+    },
+    "ward": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-31-51.png",
+      "dir": "art_v2"
+    },
+    "parry": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-32-06.png",
+      "dir": "art_v2"
+    },
+    "aegis": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-32-55.png",
+      "dir": "art_v2"
+    },
+    "heal": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-33-09.png",
+      "dir": "art_v2"
+    },
+    "greater_heal": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-33-29.png",
+      "dir": "art_v2"
+    },
+    "mass_heal": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-33-44.png",
+      "dir": "art_v2"
+    },
+    "resurrect": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-34-05.png",
+      "dir": "art_v2"
+    },
+    "inspire": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-34-25.png",
+      "dir": "art_v2"
+    },
+    "battle_cry": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-34-38.png",
+      "dir": "art_v2"
+    },
+    "focus": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-35-03.png",
+      "dir": "art_v2"
+    },
+    "blessing": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-35-24.png",
+      "dir": "art_v2"
+    },
+    "haste": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-35-42.png",
+      "dir": "art_v2"
+    },
+    "weaken": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-36-03.png",
+      "dir": "art_v2"
+    },
+    "sunder": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-36-19.png",
+      "dir": "art_v2"
+    },
+    "curse": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-37-25.png",
+      "dir": "art_v2"
+    },
+    "terror": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-37-39.png",
+      "dir": "art_v2"
+    },
+    "disarm": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-37-54.png",
+      "dir": "art_v2"
+    },
+    "insight": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-38-12.png",
+      "dir": "art_v2"
+    },
+    "deep_thought": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-38-26.png",
+      "dir": "art_v2"
+    },
+    "second_wind": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-38-44.png",
+      "dir": "art_v2"
+    },
+    "rune_wind": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-39-02.png",
+      "dir": "art_v2"
+    },
+    "rune_fire": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-39-20.png",
+      "dir": "art_v2"
+    },
+    "rune_frost": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-39-34.png",
+      "dir": "art_v2"
+    },
+    "rune_thunder": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-40-06.png",
+      "dir": "art_v2"
+    },
+    "fire_tornado": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-40-27.png",
+      "dir": "art_v2"
+    },
+    "frost_thunder": {
+      "src": "16_bit_pixel_art_illustration__2026-09-26T08-40-43.png",
+      "dir": "art_v2"
+    }
+  },
+  "unit": {
+    "hero": {
+      "src": "豆包生成/主角人物图.png",
+      "base": "asset",
+      "key": "auto"
+    },
+    "hero_battle": {
+      "src": "豆包生成/主角战斗.png",
+      "base": "asset",
+      "key": "auto"
+    },
+    "boar": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-41-47.png",
+      "dir": "art_v2"
+    },
+    "cave_bat": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-42-05.png",
+      "dir": "art_v2"
+    },
+    "giant_rat": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-42-23.png",
+      "dir": "art_v2"
+    },
+    "goblin": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-42-41.png",
+      "dir": "art_v2"
+    },
+    "goblin_shaman": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-42-59.png",
+      "dir": "art_v2"
+    },
+    "goblin_chief": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-43-17.png",
+      "dir": "art_v2"
+    },
+    "hobgoblin": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-43-36.png",
+      "dir": "art_v2"
+    },
+    "hobgoblin_captain": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-43-48.png",
+      "dir": "art_v2"
+    },
+    "skeleton": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-44-01.png",
+      "dir": "art_v2"
+    },
+    "ghoul": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-44-15.png",
+      "dir": "art_v2"
+    },
+    "wraith": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-44-44.png",
+      "dir": "art_v2"
+    },
+    "dark_knight": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-44-57.png",
+      "dir": "art_v2"
+    },
+    "death_knight": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-45-14.png",
+      "dir": "art_v2"
+    },
+    "dire_wolf": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-45-32.png",
+      "dir": "art_v2"
+    },
+    "boar_king": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-45-50.png",
+      "dir": "art_v2"
+    },
+    "cave_spider": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-46-04.png",
+      "dir": "art_v2"
+    },
+    "basilisk": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-46-55.png",
+      "dir": "art_v2"
+    },
+    "ogre": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-47-14.png",
+      "dir": "art_v2"
+    },
+    "troll": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-47-51.png",
+      "dir": "art_v2"
+    },
+    "stone_golem": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-48-06.png",
+      "dir": "art_v2"
+    },
+    "fire_elemental": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-48-25.png",
+      "dir": "art_v2"
+    },
+    "vampire": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-48-41.png",
+      "dir": "art_v2"
+    },
+    "wyvern": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-49-00.png",
+      "dir": "art_v2"
+    },
+    "abyss_warden": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-49-17.png",
+      "dir": "art_v2"
+    },
+    "abyss_lord": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-49-34.png",
+      "dir": "art_v2"
+    },
+    "witch_king": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-49-58.png",
+      "dir": "art_v2"
+    },
+    "warrior": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-50-12.png",
+      "dir": "art_v2"
+    },
+    "arch_ranger": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-50-40.png",
+      "dir": "art_v2"
+    },
+    "arch_priest": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-50-54.png",
+      "dir": "art_v2"
+    },
+    "arch_rogue": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-51-07.png",
+      "dir": "art_v2"
+    },
+    "arch_scholar": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-51-20.png",
+      "dir": "art_v2"
+    },
+    "mage": {
+      "src": "16_bit_pixel_art_character_spr_2026-09-26T08-53-57.png",
+      "dir": "art_v2"
+    }
+  },
+  "item": {
+    "crown_of_wisdom": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-32-04.png",
+      "dir": "art_items"
+    },
+    "iron_helm": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-31-28.png",
+      "dir": "art_items"
+    },
+    "leather_cap": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-31-10.png",
+      "dir": "art_items"
+    },
+    "mage_hood": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-31-46.png",
+      "dir": "art_items"
+    },
+    "eye_of_fate": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-33-00.png",
+      "dir": "art_items"
+    },
+    "lucky_clover": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-33-18.png",
+      "dir": "art_items"
+    },
+    "silver_pendant": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-32-22.png",
+      "dir": "art_items"
+    },
+    "wooden_charm": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-32-39.png",
+      "dir": "art_items"
+    },
+    "arcane_vestment": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-34-30.png",
+      "dir": "art_items"
+    },
+    "chain_mail": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-33-55.png",
+      "dir": "art_items"
+    },
+    "cloth_robe": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-33-37.png",
+      "dir": "art_items"
+    },
+    "dragon_scale": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-34-47.png",
+      "dir": "art_items"
+    },
+    "plate_armor": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-34-12.png",
+      "dir": "art_items"
+    },
+    "gauntlet": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-36-02.png",
+      "dir": "art_items"
+    },
+    "gauntlet_of_might": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-36-24.png",
+      "dir": "art_items"
+    },
+    "leather_gloves": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-35-07.png",
+      "dir": "art_items"
+    },
+    "marksman_glove": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-36-43.png",
+      "dir": "art_items"
+    },
+    "boots_of_hermes": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-38-42.png",
+      "dir": "art_items"
+    },
+    "cloth_pants": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-36-58.png",
+      "dir": "art_items"
+    },
+    "greaves": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-37-31.png",
+      "dir": "art_items"
+    },
+    "swift_leggings": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-37-14.png",
+      "dir": "art_items"
+    },
+    "iron_boots": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-38-06.png",
+      "dir": "art_items"
+    },
+    "shadow_boots": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-38-25.png",
+      "dir": "art_items"
+    },
+    "windwalkers": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-38-54.png",
+      "dir": "art_items"
+    },
+    "worn_boots": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-37-50.png",
+      "dir": "art_items"
+    },
+    "archmage_staff": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-43-47.png",
+      "dir": "art_items"
+    },
+    "battle_axe": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-39-46.png",
+      "dir": "art_items"
+    },
+    "elven_bow": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-42-53.png",
+      "dir": "art_items"
+    },
+    "flame_blade": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-40-57.png",
+      "dir": "art_items"
+    },
+    "frost_rapier": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-41-19.png",
+      "dir": "art_items"
+    },
+    "greatsword": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-40-40.png",
+      "dir": "art_items"
+    },
+    "hunting_bow": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-42-13.png",
+      "dir": "art_items"
+    },
+    "rusty_sword": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-39-11.png",
+      "dir": "art_items"
+    },
+    "short_bow": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-42-33.png",
+      "dir": "art_items"
+    },
+    "short_sword": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-39-28.png",
+      "dir": "art_items"
+    },
+    "storm_bow": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-43-11.png",
+      "dir": "art_items"
+    },
+    "warlord_blade": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-41-36.png",
+      "dir": "art_items"
+    },
+    "wooden_staff": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-43-28.png",
+      "dir": "art_items"
+    },
+    "world_breaker": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-41-56.png",
+      "dir": "art_items"
+    },
+    "antidote": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-46-05.png",
+      "dir": "art_items"
+    },
+    "bomb": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-46-23.png",
+      "dir": "art_items"
+    },
+    "greater_health_potion": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-44-22.png",
+      "dir": "art_items"
+    },
+    "greater_mana_potion": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-45-26.png",
+      "dir": "art_items"
+    },
+    "health_potion": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-44-04.png",
+      "dir": "art_items"
+    },
+    "luck_potion": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-46-53.png",
+      "dir": "art_items"
+    },
+    "mana_potion": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-45-09.png",
+      "dir": "art_items"
+    },
+    "smoke_bomb": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-46-35.png",
+      "dir": "art_items"
+    },
+    "ancient_coin": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-47-11.png",
+      "dir": "art_items"
+    },
+    "hero_medal": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-48-56.png",
+      "dir": "art_items"
+    },
+    "jade_idol": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-47-29.png",
+      "dir": "art_items"
+    },
+    "musical_box": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-47-47.png",
+      "dir": "art_items"
+    },
+    "radiant_crystal": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-48-03.png",
+      "dir": "art_items"
+    },
+    "victory_crown": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-48-25.png",
+      "dir": "art_items"
+    },
+    "bat_wing": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-50-18.png",
+      "dir": "art_items"
+    },
+    "boar_king_tusk": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-50-04.png",
+      "dir": "art_items"
+    },
+    "boar_tusk": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-49-15.png",
+      "dir": "art_items"
+    },
+    "demon_horn": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-51-24.png",
+      "dir": "art_items"
+    },
+    "dragon_scale_trophy": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-51-41.png",
+      "dir": "art_items"
+    },
+    "goblin_ear": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-50-31.png",
+      "dir": "art_items"
+    },
+    "spider_silk": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-50-43.png",
+      "dir": "art_items"
+    },
+    "wolf_pelt": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-51-08.png",
+      "dir": "art_items"
+    },
+    "broken_sword": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-52-00.png",
+      "dir": "art_items"
+    },
+    "cracked_pot": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-52-16.png",
+      "dir": "art_items"
+    },
+    "old_bone": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-52-34.png",
+      "dir": "art_items"
+    },
+    "rusty_key": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-52-52.png",
+      "dir": "art_items"
+    },
+    "torn_cloth": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-53-12.png",
+      "dir": "art_items"
+    },
+    "torn_notebook": {
+      "src": "16_bit_pixel_art_item_icon_in__2026-09-26T09-53-29.png",
+      "dir": "art_items"
+    }
+  },
+  "bg": {
+    "menu_town": {
+      "src": "16_bit_pixel_art_landscape_ill_2026-09-28T08-51-28.png",
+      "dir": "art_bg"
+    },
+    "guild_hall": {
+      "src": "16_bit_pixel_art_landscape_ill_2026-09-28T08-51-45.png",
+      "dir": "art_bg"
+    },
+    "armory": {
+      "src": "16_bit_pixel_art_landscape_ill_2026-09-28T08-52-13.png",
+      "dir": "art_bg"
+    },
+    "shop": {
+      "src": "16_bit_pixel_art_landscape_ill_2026-09-28T08-52-32.png",
+      "dir": "art_bg"
+    },
+    "storage": {
+      "src": "16_bit_pixel_art_landscape_ill_2026-09-28T08-53-20.png",
+      "dir": "art_bg"
+    },
+    "library": {
+      "src": "16_bit_pixel_art_landscape_ill_2026-09-28T08-53-35.png",
+      "dir": "art_bg"
+    },
+    "dungeon_gate": {
+      "src": "16_bit_pixel_art_landscape_ill_2026-09-28T08-53-57.png",
+      "dir": "art_bg"
+    },
+    "dungeon_battle": {
+      "src": "16_bit_pixel_art_landscape_ill_2026-09-28T08-54-14.png",
+      "dir": "art_bg"
+    }
+  }
+}

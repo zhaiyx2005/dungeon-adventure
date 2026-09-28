@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "arcane_vestment"
+display_name = "奥术法袍"
+description = "以魔力编织的长袍。"
+item_class = 0
+slot = 2
+stats_bonus = {"hp": 25, "mag_res": 15, "mag_atk": 10}
+precious_value = 50
+sell_price = 150
+usable_in_battle = false
+art_placeholder = "#AFA9EC"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "marksman_glove"
+display_name = "射手手套"
+description = "便于搭弦的精细手套。"
+item_class = 0
+slot = 3
+stats_bonus = {"phys_atk": 9, "technique": 6}
+precious_value = 40
+sell_price = 100
+usable_in_battle = false
+art_placeholder = "#85B7EB"

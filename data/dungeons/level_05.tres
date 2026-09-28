@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="DungeonData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/dungeon_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "level_05"
+display_name = "深渊之底"
+level_index = 5
+danger_rating = 4
+recommend_power_min = 900
+recommend_power_max = 1300
+entry_cost = 1600
+grid_cols = 3
+grid_rows = 7
+node_weight_battle = 70
+node_weight_treasure = 10
+node_weight_event = 20
+monster_pool = ["stone_golem", "vampire", "wyvern"]
+elite_pool = ["death_knight"]
+boss_id = "abyss_lord"
+bg_placeholder = "#FCEBEB"

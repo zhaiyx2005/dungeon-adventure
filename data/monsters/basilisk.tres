@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "basilisk"
+display_name = "石化蜥蜴"
+description = "目光所及之处皆化为石头。"
+hp = 110
+phys_atk = 30
+mag_atk = 14
+phys_res = 20
+mag_res = 14
+technique = 12
+monster_tier = 0
+dungeon_level = 3
+ai_pattern = 2
+drop_table = "basilisk_drop"
+art_placeholder = "#5DCAA5"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "shadow_boots"
+display_name = "影靴"
+description = "落地无声的软靴。"
+item_class = 0
+slot = 5
+stats_bonus = {"action": 2, "technique": 6}
+precious_value = 48
+sell_price = 140
+usable_in_battle = false
+art_placeholder = "#AFA9EC"

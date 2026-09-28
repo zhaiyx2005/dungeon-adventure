@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "gauntlet_of_might"
+display_name = "巨力护手"
+description = "蕴含巨人之力的护手。"
+item_class = 0
+slot = 3
+stats_bonus = {"phys_atk": 22, "phys_res": 8}
+precious_value = 78
+sell_price = 450
+usable_in_battle = false
+art_placeholder = "#D85A30"

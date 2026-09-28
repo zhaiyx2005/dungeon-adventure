@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "goblin_shaman"
+display_name = "地精萨满"
+description = "手持骨杖，能施放微弱法术。"
+hp = 70
+phys_atk = 12
+mag_atk = 18
+phys_res = 8
+mag_res = 10
+technique = 10
+monster_tier = 1
+dungeon_level = 1
+ai_pattern = 2
+drop_table = "shaman_drop"
+art_placeholder = "#5DCAA5"

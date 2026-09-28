@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "guard_mag"
+display_name = "普通法术防御"
+description = "获得 2.0 倍法抗的护盾，持续到本回合结束。"
+card_class = 1
+damage_type = 1
+shield_multiplier = 2.0
+action_cost = 1
+mana_cost = 6
+target_type = 4
+rarity = 0
+effect_tags = []
+art_placeholder = "#5DCAA5"

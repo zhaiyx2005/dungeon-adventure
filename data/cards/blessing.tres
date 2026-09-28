@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "blessing"
+display_name = "祝福"
+description = "提升一名队友的物攻与法攻。"
+card_class = 2
+damage_type = 1
+action_cost = 1
+mana_cost = 12
+target_type = 0
+rarity = 2
+effect_tags = []
+art_placeholder = "#FAC775"

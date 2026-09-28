@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "wooden_staff"
+display_name = "木杖"
+description = "法师的入门法器。"
+item_class = 0
+slot = 6
+stats_bonus = {"mag_atk": 6, "mana": 8}
+precious_value = 6
+sell_price = 6
+usable_in_battle = false
+art_placeholder = "#D3D1C7"

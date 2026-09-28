@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "second_wind"
+display_name = "重整旗鼓"
+description = "使一名队友恢复行动值并抽 1 张牌。"
+card_class = 2
+damage_type = 1
+action_cost = 1
+mana_cost = 5
+target_type = 0
+rarity = 1
+effect_tags = ["BUFF_ACTION", "DRAW"]
+art_placeholder = "#F4C0D1"

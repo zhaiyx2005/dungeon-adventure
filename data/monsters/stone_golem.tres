@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "stone_golem"
+display_name = "石魔像"
+description = "由魔法驱动的岩石巨像。"
+hp = 160
+phys_atk = 48
+mag_atk = 0
+phys_res = 34
+mag_res = 18
+technique = 4
+monster_tier = 0
+dungeon_level = 4
+ai_pattern = 2
+drop_table = "golem_drop"
+art_placeholder = "#888780"

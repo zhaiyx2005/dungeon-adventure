@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "chain_mail"
+display_name = "锁子甲"
+description = "由细密铁环编成的护甲。"
+item_class = 0
+slot = 2
+stats_bonus = {"hp": 35, "phys_res": 10}
+precious_value = 25
+sell_price = 40
+usable_in_battle = false
+art_placeholder = "#888780"

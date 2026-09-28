@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "boar"
+display_name = "野猪怪"
+description = "地牢入口常见的野兽，皮糙肉厚。"
+hp = 42
+phys_atk = 12
+mag_atk = 0
+phys_res = 6
+mag_res = 4
+technique = 4
+monster_tier = 0
+dungeon_level = 1
+ai_pattern = 0
+drop_table = "boar_drop"
+art_placeholder = "#97C459"

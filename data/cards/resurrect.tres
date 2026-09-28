@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "resurrect"
+display_name = "复活术"
+description = "使一名濒死成员以 1 点血量回到战斗。"
+card_class = 2
+damage_type = 1
+action_cost = 1
+mana_cost = 25
+target_type = 0
+rarity = 3
+effect_tags = ["REVIVE"]
+art_placeholder = "#FAC775"

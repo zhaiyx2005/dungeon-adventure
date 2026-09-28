@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "wyvern"
+display_name = "双足飞龙"
+description = "喷吐毒液的亚龙。"
+hp = 150
+phys_atk = 50
+mag_atk = 24
+phys_res = 26
+mag_res = 20
+technique = 18
+monster_tier = 0
+dungeon_level = 4
+ai_pattern = 0
+drop_table = "wyvern_drop"
+art_placeholder = "#97C459"

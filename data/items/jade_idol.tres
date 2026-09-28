@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "jade_idol"
+display_name = "翡翠神像"
+description = "雕刻着未知神祇的翠绿雕像。"
+item_class = 2
+slot = 7
+stats_bonus = {}
+precious_value = 80
+sell_price = 400
+usable_in_battle = false
+art_placeholder = "#5DCAA5"

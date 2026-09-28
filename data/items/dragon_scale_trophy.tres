@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "dragon_scale_trophy"
+display_name = "龙鳞"
+description = "坚硬的龙鳞，极为稀有。"
+item_class = 3
+slot = 7
+stats_bonus = {}
+precious_value = 75
+sell_price = 300
+usable_in_battle = false
+art_placeholder = "#E24B4A"

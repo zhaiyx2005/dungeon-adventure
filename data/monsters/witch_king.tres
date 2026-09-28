@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "witch_king"
+display_name = "巫王"
+description = "墓庭的主人，掌握着禁忌之术。"
+hp = 900
+phys_atk = 62
+mag_atk = 60
+phys_res = 40
+mag_res = 38
+technique = 24
+monster_tier = 2
+dungeon_level = 4
+ai_pattern = 2
+drop_table = "witchking_drop"
+art_placeholder = "#26215C"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "bulwark"
+display_name = "壁垒"
+description = "为全体队友提供 1.5 倍物抗的护盾。"
+card_class = 1
+damage_type = 0
+shield_multiplier = 1.5
+action_cost = 1
+mana_cost = 0
+target_type = 3
+rarity = 2
+effect_tags = []
+art_placeholder = "#5DCAA5"

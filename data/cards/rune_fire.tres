@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "rune_fire"
+display_name = "火之符文"
+description = "与同组组件同回合打出，本卡无直接效果。"
+card_class = 2
+damage_type = 1
+action_cost = 0
+mana_cost = 2
+target_type = 4
+rarity = 1
+effect_tags = ["COMBO"]
+art_placeholder = "#D85A30"
+combo_key = "fire_tornado"
+combo_name = "风火龙卷"
+combo_part = "fire"
+combo_complete = ["wind", "fire"]
+combo_multiplier = 0.0
+combo_desc = "解锁「风火龙卷」"
+combo_payoff = false

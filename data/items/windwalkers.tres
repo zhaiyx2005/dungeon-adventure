@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "windwalkers"
+display_name = "风行者"
+description = "踏风而行的秘靴。"
+item_class = 0
+slot = 5
+stats_bonus = {"action": 3, "mag_res": 12, "technique": 8}
+precious_value = 82
+sell_price = 480
+usable_in_battle = false
+art_placeholder = "#9FE1CB"

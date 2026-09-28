@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "ghoul"
+display_name = "食尸鬼"
+description = "以腐肉为食的亡灵。"
+hp = 75
+phys_atk = 21
+mag_atk = 6
+phys_res = 10
+mag_res = 12
+technique = 5
+monster_tier = 0
+dungeon_level = 2
+ai_pattern = 0
+drop_table = "ghoul_drop"
+art_placeholder = "#D3D1C7"

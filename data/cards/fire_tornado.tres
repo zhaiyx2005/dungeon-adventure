@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "fire_tornado"
+display_name = "风火龙卷"
+description = "凑齐前置后，对全体敌人造成 3.0 倍法伤。"
+card_class = 0
+damage_type = 1
+multiplier = 3.0
+action_cost = 2
+mana_cost = 30
+target_type = 2
+rarity = 3
+effect_tags = ["COMBO"]
+art_placeholder = "#D85A30"
+combo_key = "fire_tornado"
+combo_name = "风火龙卷"
+combo_part = ""
+combo_complete = ["wind", "fire"]
+combo_multiplier = 3.0
+combo_desc = "风 + 火"
+combo_payoff = true

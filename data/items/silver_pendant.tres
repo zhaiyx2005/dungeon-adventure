@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "silver_pendant"
+display_name = "银质吊坠"
+description = "微微发光的银色吊坠。"
+item_class = 0
+slot = 1
+stats_bonus = {"technique": 8, "luck": 2}
+precious_value = 30
+sell_price = 50
+usable_in_battle = false
+art_placeholder = "#B5D4F4"

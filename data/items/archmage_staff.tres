@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "archmage_staff"
+display_name = "大法师法杖"
+description = "顶端嵌着硕大魔晶的法杖。"
+item_class = 0
+slot = 6
+stats_bonus = {"mag_atk": 35, "mana": 40, "mag_res": 10}
+precious_value = 88
+sell_price = 650
+usable_in_battle = false
+art_placeholder = "#AFA9EC"

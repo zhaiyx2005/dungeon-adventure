@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "dire_wolf"
+display_name = "凶狼"
+description = "成群狩猎，配合默契。"
+hp = 60
+phys_atk = 23
+mag_atk = 0
+phys_res = 8
+mag_res = 6
+technique = 14
+monster_tier = 0
+dungeon_level = 2
+ai_pattern = 1
+drop_table = "wolf_drop"
+art_placeholder = "#888780"

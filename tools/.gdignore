@@ -1,0 +1,2 @@
+# Godot 4 导入排除标记
+# 放在此目录下，Godot 会跳过整个 tools/ 目录，不去导入 Python 文件。

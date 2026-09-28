@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "goblin"
+display_name = "地精"
+description = "矮小狡猾，惯于偷袭。"
+hp = 38
+phys_atk = 11
+mag_atk = 4
+phys_res = 5
+mag_res = 5
+technique = 6
+monster_tier = 0
+dungeon_level = 1
+ai_pattern = 1
+drop_table = "goblin_drop"
+art_placeholder = "#C0DD97"

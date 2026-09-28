@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "leather_gloves"
+display_name = "皮手套"
+description = "磨损的皮制手套。"
+item_class = 0
+slot = 3
+stats_bonus = {"phys_atk": 3}
+precious_value = 5
+sell_price = 5
+usable_in_battle = false
+art_placeholder = "#D3D1C7"

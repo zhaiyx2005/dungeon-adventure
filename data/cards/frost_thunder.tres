@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "frost_thunder"
+display_name = "霜雷裁决"
+description = "凑齐前置后，对全体敌人造成 2.0 倍法伤。"
+card_class = 0
+damage_type = 1
+multiplier = 2.0
+action_cost = 2
+mana_cost = 22
+target_type = 2
+rarity = 2
+effect_tags = ["COMBO", "BONUS_VS_SHIELD"]
+art_placeholder = "#9FE1CB"
+combo_key = "frost_thunder"
+combo_name = "霜雷裁决"
+combo_part = ""
+combo_complete = ["frost", "thunder"]
+combo_multiplier = 2.0
+combo_desc = "霜 + 雷"
+combo_payoff = true

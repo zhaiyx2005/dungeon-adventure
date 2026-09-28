@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MonsterData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/monster_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "abyss_warden"
+display_name = "深渊守门人"
+description = "镇守深渊裂口的古老存在。"
+hp = 600
+phys_atk = 46
+mag_atk = 30
+phys_res = 30
+mag_res = 24
+technique = 16
+monster_tier = 2
+dungeon_level = 3
+ai_pattern = 2
+drop_table = "warden_drop"
+art_placeholder = "#5F5E5A"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "static_bolt"
+display_name = "静电束"
+description = "造成 1.0 倍法术伤害；目标带盾时提升至 1.5 倍。"
+card_class = 0
+damage_type = 1
+multiplier = 1.0
+action_cost = 1
+mana_cost = 6
+target_type = 1
+rarity = 1
+effect_tags = ["BONUS_VS_SHIELD"]
+art_placeholder = "#85B7EB"

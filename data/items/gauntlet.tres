@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "gauntlet"
+display_name = "铁护手"
+description = "包覆铁片的护手。"
+item_class = 0
+slot = 3
+stats_bonus = {"phys_atk": 7, "phys_res": 3}
+precious_value = 22
+sell_price = 35
+usable_in_battle = false
+art_placeholder = "#888780"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "aegis"
+display_name = "神盾"
+description = "获得 5.0 倍物抗的护盾，持续到本回合结束。"
+card_class = 1
+damage_type = 0
+shield_multiplier = 5.0
+action_cost = 1
+mana_cost = 0
+target_type = 4
+rarity = 3
+effect_tags = []
+art_placeholder = "#FAC775"

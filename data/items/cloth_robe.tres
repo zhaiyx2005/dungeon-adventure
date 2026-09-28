@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "cloth_robe"
+display_name = "布袍"
+description = "最普通的旅行衣物。"
+item_class = 0
+slot = 2
+stats_bonus = {"hp": 15, "phys_res": 2}
+precious_value = 4
+sell_price = 4
+usable_in_battle = false
+art_placeholder = "#D3D1C7"

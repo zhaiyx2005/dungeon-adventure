@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "quick_jab"
+display_name = "快速突刺"
+description = "造成 0.6 倍物理伤害，消耗行动值极低。"
+card_class = 0
+damage_type = 0
+multiplier = 0.6
+action_cost = 1
+mana_cost = 0
+target_type = 1
+rarity = 0
+effect_tags = []
+art_placeholder = "#B4B2A9"

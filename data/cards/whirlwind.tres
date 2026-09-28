@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/card_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "whirlwind"
+display_name = "旋风斩"
+description = "对所有敌人造成 1.2 倍物理伤害。"
+card_class = 0
+damage_type = 0
+multiplier = 1.2
+action_cost = 1
+mana_cost = 0
+target_type = 2
+rarity = 2
+effect_tags = []
+art_placeholder = "#B4B2A9"

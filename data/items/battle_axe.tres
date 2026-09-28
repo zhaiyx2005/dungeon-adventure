@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "battle_axe"
+display_name = "战斧"
+description = "沉重的双手斧。"
+item_class = 0
+slot = 6
+stats_bonus = {"phys_atk": 20}
+precious_value = 30
+sell_price = 60
+usable_in_battle = false
+art_placeholder = "#888780"

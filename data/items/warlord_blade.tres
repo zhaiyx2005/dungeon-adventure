@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "warlord_blade"
+display_name = "战王之刃"
+description = "属于某位战王的遗物。"
+item_class = 0
+slot = 6
+stats_bonus = {"phys_atk": 32, "technique": 12, "hp": 20}
+precious_value = 92
+sell_price = 900
+usable_in_battle = false
+art_placeholder = "#E24B4A"

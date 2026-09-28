@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/item_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "boar_king_tusk"
+display_name = "野猪人王獠牙"
+description = "巨大而锋利的獠牙。"
+item_class = 3
+slot = 7
+stats_bonus = {}
+precious_value = 40
+sell_price = 80
+usable_in_battle = false
+art_placeholder = "#993C1D"

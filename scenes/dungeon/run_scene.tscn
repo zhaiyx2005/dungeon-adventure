@@ -1,0 +1,201 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" uid="uid://0hxdegg0n57t" path="res://scripts/dungeon/run_scene.gd" id="1_run"]
+[ext_resource type="Theme" uid="uid://cnq7theme00001" path="res://assets/theme_main.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bg"]
+bg_color = Color(0.945098, 0.937255, 0.909804, 1)
+
+[node name="RunScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_run")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bg")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 24
+
+[node name="Root" type="HBoxContainer" parent="Margin"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="LeftPanel" type="VBoxContainer" parent="Margin/Root"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="HeaderLabel" type="Label" parent="Margin/Root/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "地牢探索"
+
+[node name="MapArea" type="VBoxContainer" parent="Margin/Root/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="HintLabel" type="Label" parent="Margin/Root/LeftPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.39, 0.36, 1)
+theme_override_font_sizes/font_size = 14
+text = "点击 ▶ 高亮的节点前进。"
+
+[node name="RightPanel" type="VBoxContainer" parent="Margin/Root"]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="StatusLabel" type="Label" parent="Margin/Root/RightPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/line_spacing = 4
+text = "状态"
+
+[node name="InfoLabel" type="Label" parent="Margin/Root/RightPanel"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.39, 0.36, 1)
+text = ""
+
+[node name="Spacer" type="Control" parent="Margin/Root/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SelectPanel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -430.0
+offset_top = -322.0
+offset_right = 430.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SelectMargin" type="MarginContainer" parent="SelectPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 24
+
+[node name="SelectBox" type="VBoxContainer" parent="SelectPanel/SelectMargin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="SelectTitle" type="Label" parent="SelectPanel/SelectMargin/SelectBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "地下城探索 · 准备"
+
+[node name="SelectTabs" type="HBoxContainer" parent="SelectPanel/SelectMargin/SelectBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SelectScroll" type="ScrollContainer" parent="SelectPanel/SelectMargin/SelectBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SelectList" type="VBoxContainer" parent="SelectPanel/SelectMargin/SelectBox/SelectScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="SelectClose" type="Button" parent="SelectPanel/SelectMargin/SelectBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+text = "先不去了"
+
+[node name="Overlay" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -180.0
+offset_right = 260.0
+offset_bottom = 180.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OverlayMargin" type="MarginContainer" parent="Overlay"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 26
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 26
+
+[node name="OverlayBox" type="VBoxContainer" parent="Overlay/OverlayMargin"]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="OverlayTitle" type="Label" parent="Overlay/OverlayMargin/OverlayBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = ""
+horizontal_alignment = 1
+
+[node name="OverlayText" type="Label" parent="Overlay/OverlayMargin/OverlayBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 15
+text = ""
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OverlayButton" type="Button" parent="Overlay/OverlayMargin/OverlayBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+text = "确定"
+
+[node name="OverlayButton2" type="Button" parent="Overlay/OverlayMargin/OverlayBox"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 42)
+layout_mode = 2
+text = ""
