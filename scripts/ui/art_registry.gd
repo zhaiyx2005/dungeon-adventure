@@ -148,6 +148,14 @@ const ARCHETYPES := {
 ## 四属性都很平均时的原型（没有明显长项 = 万金油游侠）
 const ARCHETYPE_BALANCED := "arch_ranger"
 
+const ARCHETYPE_NAMES_CN := {
+	"warrior": "战士",
+	"arch_scholar": "法师",
+	"arch_rogue": "盗贼",
+	"arch_priest": "牧师",
+	"arch_ranger": "游侠",
+}
+
 ## 按最高属性判定职业原型 id。
 ##
 ## "万金油游侠"的判据：**最高值并列 + 四属性极差 ≤1**。
@@ -181,10 +189,29 @@ static func archetype_of(a: Adventurer) -> String:
 	return String(ARCHETYPES.get(best_key, ARCHETYPE_BALANCED))
 
 
+static func archetype_name_cn(a: Adventurer) -> String:
+	return String(ARCHETYPE_NAMES_CN.get(archetype_of(a), "冒险者"))
+
+
 ## 冒险者的人物卡立绘（半身）：先自己的，再原型
 static func adventurer_bust(a: Adventurer) -> Texture2D:
 	if a == null:
 		return null
+	var atlas := _load_tex(UNIT_DIR + "portraits_pixel_v2.png")
+	if atlas != null:
+		var portraits := {"hero": 0, "warrior": 1, "mage": 2, "arch_scholar": 2,
+			"arch_rogue": 3, "arch_priest": 4, "arch_ranger": 5}
+		var portrait_id: String = a.id if portraits.has(a.id) else archetype_of(a)
+		var key := "pixel_portrait/" + portrait_id
+		if not _cache.has(key):
+			var index: int = portraits.get(portrait_id, 0)
+			var region := AtlasTexture.new()
+			region.atlas = atlas
+			var cell := Vector2(atlas.get_width() / 3.0, atlas.get_height() / 2.0)
+			region.region = Rect2(Vector2(index % 3, index / 3) * cell, cell)
+			region.filter_clip = true
+			_cache[key] = region
+		return _cache[key]
 	var own := unit_bust(a.id)
 	if own != null:
 		return own

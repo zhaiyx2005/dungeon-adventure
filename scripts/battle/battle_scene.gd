@@ -218,8 +218,9 @@ func _soften_battlefield() -> void:
 			"Root/Middle/Battlefield/FieldMargin/FieldRow/EnemyBox/EnemyTitle"]:
 		var l := get_node_or_null(path) as Label
 		if l != null:
-			l.add_theme_color_override("font_outline_color", Color("#fbfaf6"))
+			l.add_theme_color_override("font_outline_color", Color("#142229"))
 			l.add_theme_constant_override("outline_size", 4)
+			l.add_theme_color_override("font_color", Color("#ecd5a0"))
 
 
 func _deferred_relayout() -> void:
@@ -343,6 +344,7 @@ func _refresh_hand() -> void:
 	for cv in _card_views:
 		cv.queue_free()
 	_card_views.clear()
+	AudioManager.play_sfx("card_draw", 0.92)
 
 	var hand := battle.deck.hand
 	var count := hand.size()
@@ -546,18 +548,21 @@ func _on_card_drag_released(view: Node, global_pos: Vector2) -> void:
 				_flash("目标必须是存活的敌人")
 				_layout_hand()
 				return
+			AudioManager.play_sfx("card_play", 0.98)
 			battle.play_card(caster, card, uv.monster)
 		else:
 			if uv.adventurer == null:
 				_flash("目标必须是友方成员")
 				_layout_hand()
 				return
+			AudioManager.play_sfx("card_play", 1.02)
 			battle.play_card(caster, card, uv.adventurer)
 		return
 
 	# 自身卡（防御 / 自增益）→ 箭头已指向释放者本人，落在战场任意处即生效
 	if card.target_type == CardData.TargetType.SELF:
 		if _battlefield_hit(global_pos) or _unit_view_at(global_pos) != null:
+			AudioManager.play_sfx("card_play")
 			battle.play_card(caster, card, null)
 		else:
 			_flash("「%s」是自身效果卡，拖到战场任意处释放" % card.display_name)
@@ -566,6 +571,7 @@ func _on_card_drag_released(view: Node, global_pos: Vector2) -> void:
 
 	# 全场卡 → 落在战场上即生效
 	if _battlefield_hit(global_pos) or _unit_view_at(global_pos) != null:
+		AudioManager.play_sfx("card_play", 1.04)
 		battle.play_card(caster, card, null)
 	else:
 		_flash("「%s」是全場效果卡，拖到战场任意处释放" % card.display_name)

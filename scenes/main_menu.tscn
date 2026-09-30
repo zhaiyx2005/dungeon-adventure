@@ -58,22 +58,24 @@ theme_override_constants/separation = 14
 
 [node name="Title" type="Label" parent="CenterBox/VBox"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 44
+theme_override_font_sizes/font_size = 48
 text = "地牢冒险记"
-horizontal_alignment = 1
+horizontal_alignment = 0
 
 [node name="Subtitle" type="Label" parent="CenterBox/VBox"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.4, 0.39, 0.36, 1)
 theme_override_font_sizes/font_size = 15
 text = "卡牌构筑 · 地牢推进 · 队伍养成"
-horizontal_alignment = 1
+horizontal_alignment = 0
 
-[node name="MenuBox" type="VBoxContainer" parent="CenterBox/VBox"]
+[node name="MenuBox" type="GridContainer" parent="CenterBox/VBox"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(320, 0)
+custom_minimum_size = Vector2(440, 0)
+columns = 2
 layout_mode = 2
-theme_override_constants/separation = 8
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 10
 
 [node name="ToastLabel" type="Label" parent="."]
 unique_name_in_owner = true
@@ -94,4 +96,4 @@ modulate = Color(1, 1, 1, 0)
 theme_override_colors/font_color = Color(0.4, 0.39, 0.36, 1)
 theme_override_font_sizes/font_size = 17
 text = ""
-horizontal_alignment = 1
+horizontal_alignment = 0

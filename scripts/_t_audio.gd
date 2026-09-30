@@ -134,13 +134,15 @@ func _finish() -> void:
 
 func _test_assets(sfx_files: Dictionary, bgm_files: Dictionary) -> void:
 	print("-- 素材 --")
-	_ok(sfx_files.size() >= 14, "音效登记表 %d 条（≥14：点击/确认/拒绝/物理攻击/法术攻击/物理受击/法术受击/暴击/护盾/治疗/回蓝/联合卡/胜利/失败）"
+	_ok(sfx_files.size() >= 18, "音效登记表 %d 条（基础战斗 + 卡牌/地图/奖励反馈）"
 		% sfx_files.size())
-	_ok(bgm_files.size() == 2, "BGM 登记表 %d 条（开屏标题曲 + 战斗曲）" % bgm_files.size())
+	_ok(bgm_files.size() == 4, "BGM 登记表 %d 条（标题/城镇/地下城/战斗）" % bgm_files.size())
 
 	# 需求点名的四类必须有
 	for need in ["attack_phys", "attack_magic", "hit_phys", "hit_magic", "shield", "ui_click"]:
 		_ok(sfx_files.has(need), "登记表包含 %s" % need)
+	for need in ["card_draw", "card_play", "map_step", "reward"]:
+		_ok(sfx_files.has(need), "登记表包含新增反馈 %s" % need)
 
 	# 登记表 ↔ 磁盘一一对应（多一个文件没登记 = 白做了；登记了没文件 = 播放失败）
 	var disk: Array = []
@@ -474,8 +476,8 @@ func _test_scene_bgm() -> void:
 	var cases := [
 		[SPLASH_SCENE, "title", "开屏页"],
 		[MENU_SCENE, "title", "主菜单"],
-		[TOWN_SCENE, "title", "城镇"],
-		[RUN_SCENE, "title", "地牢准备/地图"],
+		[TOWN_SCENE, "town", "城镇"],
+		[RUN_SCENE, "dungeon", "地牢准备/地图"],
 	]
 	for c in cases:
 		var ps: PackedScene = load(String(c[0]))

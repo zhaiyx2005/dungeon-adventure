@@ -4,7 +4,9 @@
 [ext_resource type="Theme" uid="uid://cnq7theme00001" path="res://assets/theme_main.tres" id="2_theme"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bf"]
-bg_color = Color(0.909804, 0.901961, 0.870588, 1)
+bg_color = Color(0.10, 0.17, 0.19, 1)
+border_width_bottom = 3
+border_color = Color(0.62, 0.47, 0.25, 1)
 
 [node name="BattleScene" type="Control"]
 layout_mode = 3
@@ -30,9 +32,9 @@ layout_mode = 2
 [node name="TopMargin" type="MarginContainer" parent="Root/TopBar"]
 layout_mode = 2
 theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 6
+theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 6
+theme_override_constants/margin_bottom = 12
 
 [node name="TopRow" type="HBoxContainer" parent="Root/TopBar/TopMargin"]
 layout_mode = 2
@@ -163,9 +165,9 @@ layout_mode = 2
 [node name="RailMargin" type="MarginContainer" parent="Root/Middle/RightRail"]
 layout_mode = 2
 theme_override_constants/margin_left = 6
-theme_override_constants/margin_top = 6
+theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 6
-theme_override_constants/margin_bottom = 6
+theme_override_constants/margin_bottom = 12
 
 [node name="RailBox" type="VBoxContainer" parent="Root/Middle/RightRail/RailMargin"]
 layout_mode = 2
@@ -218,9 +220,9 @@ layout_mode = 2
 [node name="BottomMargin" type="MarginContainer" parent="Root/Bottom"]
 layout_mode = 2
 theme_override_constants/margin_left = 12
-theme_override_constants/margin_top = 6
+theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 12
-theme_override_constants/margin_bottom = 6
+theme_override_constants/margin_bottom = 12
 
 [node name="BottomRow" type="HBoxContainer" parent="Root/Bottom/BottomMargin"]
 layout_mode = 2
@@ -266,9 +268,9 @@ layout_mode = 2
 [node name="LogMargin" type="MarginContainer" parent="Root/Bottom/BottomMargin/BottomRow/LogPanel"]
 layout_mode = 2
 theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 6
+theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 6
+theme_override_constants/margin_bottom = 12
 
 [node name="LogBox" type="VBoxContainer" parent="Root/Bottom/BottomMargin/BottomRow/LogPanel/LogMargin"]
 layout_mode = 2

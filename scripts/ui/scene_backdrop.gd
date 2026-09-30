@@ -53,6 +53,8 @@ static func attach(host: Control, image_id: String, scrim_alpha: float) -> Scene
 	b.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	b._build()
 	b.set_scrim(scrim_alpha)
+	if image_id == "dungeon_battle":
+		b._scrim.color = Color(0.04, 0.075, 0.09, 0.45)
 	b.show_image(image_id)
 	host.add_child(b)
 	host.move_child(b, 0)          # 垫到底下，已有 UI 全部盖在它上面

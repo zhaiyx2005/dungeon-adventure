@@ -71,7 +71,7 @@ var _trophy_item: ItemData = null
 
 
 func _ready() -> void:
-	AudioManager.play_bgm("title")
+	AudioManager.play_bgm("town")
 	# 背景：按标签页切图（9-28 需求）。先挂第一张，_switch_tab 里会跟着换
 	_backdrop = SceneBackdrop.attach(self, TAB_BG[TABS[0]], SceneBackdrop.SCRIM_TOWN)
 	# 顶栏这三条文字也直接压在背景上（没有面板），一并加描边
@@ -225,7 +225,8 @@ func _adventurer_card(a: Adventurer, payload: Variant = null) -> CardFrame:
 	# 有像素立绘就用立绘（9-26，取半身）；没有则回落到原来的纯色块。
 	# 招募来的人没有专属立绘，会按最高属性分派一张职业原型立绘（ArtRegistry 里统一处理）。
 	c.setup(a.display_name, "\n".join(lines), Color("#4A6FB5"),
-		{"badge_l": badge_l, "image": ArtRegistry.adventurer_bust(a)})
+		{"badge_l": badge_l, "badge_r": ArtRegistry.archetype_name_cn(a),
+		"image": ArtRegistry.adventurer_bust(a)})
 	# 9-22 修改意见 4：详情改由右键触发
 	c.right_clicked.connect(_on_adventurer_card_clicked.bind(a))
 	return c

@@ -64,7 +64,7 @@ var _overlay_action2: String = "none"
 
 
 func _ready() -> void:
-	AudioManager.play_bgm("title")
+	AudioManager.play_bgm("dungeon")
 	# 背景：地下城入口大厅（9-28 需求）
 	SceneBackdrop.attach(self, "dungeon_gate", SceneBackdrop.SCRIM_DUNGEON)
 	# 左/右两栏标题直接压在背景上（没有面板垫底）→ 加描边
@@ -293,11 +293,9 @@ func _build_prep_overview() -> void:
 	lines.append("卡组 %d 张 · 背包 %d 件 · 金币 %d" % [
 		GameData.deck.size(), GameData.inventory.size(), GameData.gold,
 	])
-	_select_list.add_child(_prep_label("\n".join(lines), 15))
+	_select_list.add_child(_prep_label(lines[0] + "  /  " + lines[2], 15))
 
-	var desc := _prep_label("从第 1 层进入地牢：一层有多条路线与多个房间，终点是层 Boss 房。" \
-		+ "击败层 Boss 后可选择撤离返回城镇，或继续向下 —— 越深难度越高、奖励越丰厚。" \
-		+ "全队濒死会失去本次获得的经验、金币与物品。", 13)
+	var desc := _prep_label("击败层 Boss 后可撤离或深入下一层。全队濒死会损失本轮收益与背包物品。", 13)
 	desc.add_theme_color_override("font_color", Color(0.4, 0.39, 0.36, 1))
 	_select_list.add_child(desc)
 
@@ -311,45 +309,49 @@ func _build_prep_overview() -> void:
 ## 层级阶梯：每层一行，显示名称 / 危险度 / 战力要求 / 入场费 / 准入状态 + 进入按钮
 func _build_floors() -> void:
 	var probe := RunManager.new()
-	var gd := GameData
+	var colors := [Color("#577e75"), Color("#657c9d"), Color("#8b6d99"), Color("#a47d48"), Color("#ad5657")]
 	for level in range(1, 6):
-		var d := gd.db.get_dungeon_by_level(level)
+		var d := GameData.db.get_dungeon_by_level(level)
 		if d == null:
 			continue
-
-		var row := HBoxContainer.new()
-		row.add_theme_constant_override("separation", 10)
-		_select_list.add_child(row)
-
-		var cleared := gd.is_level_cleared(level)
 		var reason: String = probe.direct_entry_block_reason(d)
-
-		var head := _prep_label("第 %d 层 · %s（危险 %s）" % [
-			level, d.display_name, d.get_danger_name(),
-		], 14, 250)
-		row.add_child(head)
-
-		var cost_txt := "免费" if d.entry_cost <= 0 else "%d 金" % d.entry_cost
-		var info := _prep_label("战力 ≥ %d · 入场 %s" % [d.recommend_power_min, cost_txt], 12, 190)
-		info.add_theme_color_override("font_color", Color(0.42, 0.41, 0.38, 1))
-		row.add_child(info)
-
-		if cleared:
-			var mark := _prep_label("✔ 已通关", 12, 90)
-			mark.add_theme_color_override("font_color", Color("#3B6D11"))
-			row.add_child(mark)
-
+		var panel := PanelContainer.new()
+		var box := StyleBoxFlat.new()
+		box.bg_color = Color("#e5dcc5") if reason == "" else Color("#d2cebd")
+		box.border_color = colors[level - 1]
+		box.border_width_left = 5
+		box.content_margin_left = 12
+		box.content_margin_right = 12
+		box.content_margin_top = 6
+		box.content_margin_bottom = 6
+		panel.add_theme_stylebox_override("panel", box)
+		_select_list.add_child(panel)
+		var row := HBoxContainer.new()
+		row.add_theme_constant_override("separation", 16)
+		panel.add_child(row)
+		var art := TextureRect.new()
+		art.custom_minimum_size = Vector2(80, 48)
+		art.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		art.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		art.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+		art.texture = ArtRegistry.bg("dungeon_gate" if level == 1 else "dungeon_battle")
+		art.modulate = colors[level - 1].lightened(0.35)
+		row.add_child(art)
+		var text_box := VBoxContainer.new()
+		text_box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		row.add_child(text_box)
+		var status := "已通关" if GameData.is_level_cleared(level) else "尚未通关"
+		text_box.add_child(_prep_label("%02d  /  %s  ·  %s" % [level, d.display_name, status], 17))
+		var cost := "免费" if d.entry_cost <= 0 else "%d 金" % d.entry_cost
+		text_box.add_child(_prep_label("危险 %s  ·  战力 ≥ %d  ·  入场 %s" % [d.get_danger_name(), d.recommend_power_min, cost], 13))
 		var btn := Button.new()
 		btn.name = "EnterDungeonButton" if level == 1 else "EnterFloorButton%d" % level
-		btn.custom_minimum_size = Vector2(300, 38)
-		if reason == "":
-			btn.text = "进入第 %d 层%s" % [level, "" if d.entry_cost <= 0 else "（花 %d 金）" % d.entry_cost]
-			btn.tooltip_text = "按第 %d 层的推荐战力从入口重新走一遍" % level
-			btn.pressed.connect(_on_select_level.bind(level))
-		else:
-			btn.text = reason
-			btn.tooltip_text = "%s\n（第 %d 层：打败这一层的 Boss 后，才算通关过该层）" % [reason, level]
-			btn.disabled = true
+		btn.custom_minimum_size = Vector2(300, 44)
+		btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		btn.text = "进入第 %d 层  →" % level if reason == "" else reason
+		btn.tooltip_text = "入场：%s" % cost if reason == "" else reason
+		btn.disabled = reason != ""
+		btn.pressed.connect(_on_select_level.bind(level))
 		row.add_child(btn)
 
 
@@ -693,17 +695,21 @@ func _on_run_log(_text: String) -> void:
 func _on_node_pressed(node: MapGenerator.MapNode) -> void:
 	var run := GameData.run
 	if run == null or not run.move_to(node):
+		AudioManager.play_sfx("ui_deny")
 		return
+	AudioManager.play_sfx("map_step", 0.96 + float(node.row % 3) * 0.04)
 
 	match node.type:
 		MapGenerator.NodeType.BATTLE, MapGenerator.NodeType.BOSS:
 			_start_battle(node)
 		MapGenerator.NodeType.TREASURE:
 			run.open_treasure()
+			AudioManager.play_sfx("reward")
 			_show_overlay(run.last_event_title, run.last_event_lines, "继续探索", "", "continue", "none")
 			_refresh()
 		MapGenerator.NodeType.EVENT:
 			run.resolve_event()
+			AudioManager.play_sfx("reward", 0.92)
 			_show_overlay(run.last_event_title, run.last_event_lines, "继续探索", "", "continue", "none")
 			_refresh()
 		_:

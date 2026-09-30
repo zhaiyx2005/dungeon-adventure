@@ -23,7 +23,7 @@ signal right_clicked(frame: CardFrame)
 const STYLE_PERSON := "person"
 const STYLE_BATTLE := "battle"
 
-const BORDER_PERSON := "res://assets/images/card/person_card_border.png"
+const BORDER_PERSON := "res://assets/images/card/person_pixel_frame.svg"
 const BORDER_BATTLE := "res://assets/images/card/battle_card_border.png"
 
 ## 战斗卡边框分区（比例）—— 素材 750×1050。
@@ -262,7 +262,7 @@ func _build() -> void:
 	_frame = TextureRect.new()
 	_frame.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	_frame.stretch_mode = TextureRect.STRETCH_SCALE
-	_frame.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
+	_frame.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
 	_frame.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	_frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(_frame)

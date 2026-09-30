@@ -36,7 +36,7 @@ const MENU_ITEMS := [
 ]
 
 ## 阶段 2 的验证入口，单独放在最上方
-const QUICK_BATTLE_TEXT := "⚡ 快速战斗（新手地穴 · 第 1 层）"
+const QUICK_BATTLE_TEXT := "⚔ 快速战斗（新手地穴 · 第 1 层）"
 
 ## 设置面板里三个音量滑杆的配置：显示名 → AudioManager 的读写方法名
 const VOLUME_ROWS := [
@@ -115,7 +115,7 @@ const GUIDE_SECTIONS := [
 		+ "覆盖已有存档前会先确认一次。游玩时长跟着档走，不会因为你换了栏位而混在一起。"],
 ]
 
-@onready var _menu_box: VBoxContainer = %MenuBox
+@onready var _menu_box: GridContainer = %MenuBox
 @onready var _gold_label: Label = %GoldLabel
 @onready var _toast: Label = %ToastLabel
 
@@ -135,6 +135,7 @@ func _ready() -> void:
 	# 背景：城镇远景（9-28 需求「主页面是城镇」）
 	_backdrop = SceneBackdrop.attach(self, "menu_town", SceneBackdrop.SCRIM_MENU)
 	_outline_over_scenery()
+	_build_pixel_lobby()
 	_build_menu()
 	_refresh_status()
 
@@ -151,8 +152,8 @@ func _outline_over_scenery() -> void:
 	for n in targets:
 		var l := n as Label
 		if l != null:
-			l.add_theme_color_override("font_outline_color", Color("#fbfaf6"))
-			l.add_theme_constant_override("outline_size", 4)
+			l.add_theme_color_override("font_outline_color", Color("#17242b"))
+			l.add_theme_constant_override("outline_size", 6)
 
 
 func _build_menu() -> void:
@@ -161,19 +162,30 @@ func _build_menu() -> void:
 
 	# 快速战斗入口
 	var quick := Button.new()
-	quick.text = QUICK_BATTLE_TEXT
-	quick.custom_minimum_size = Vector2(320, 46)
+	quick.text = "快速战斗"
+	quick.tooltip_text = QUICK_BATTLE_TEXT
+	quick.custom_minimum_size = Vector2(214, 48)
 	quick.pressed.connect(_on_quick_battle)
 	_menu_box.add_child(quick)
 
-	_menu_box.add_child(HSeparator.new())
 
 	for entry in MENU_ITEMS:
 		var title: String = entry[0]
 		var implemented: bool = entry[1]
 		var btn := Button.new()
 		btn.text = title
-		btn.custom_minimum_size = Vector2(320, 40)
+		btn.custom_minimum_size = Vector2(214, 48)
+		btn.tooltip_text = entry[2]
+		if title == "地下城探索":
+			var primary := StyleBoxFlat.new()
+			primary.bg_color = Color("#284b4d")
+			primary.border_color = Color("#d9b867")
+			primary.set_border_width_all(2)
+			primary.shadow_color = Color(0, 0, 0, 0.3)
+			primary.shadow_size = 3
+			primary.shadow_offset = Vector2(3, 3)
+			btn.add_theme_stylebox_override("normal", primary)
+			btn.add_theme_color_override("font_color", Color("#ffe5a3"))
 		btn.disabled = not implemented
 		if not implemented:
 			btn.tooltip_text = "尚未实现 —— %s" % entry[2]
@@ -721,3 +733,51 @@ func _on_volume_changed(value: float, setter: Callable, pct: Label) -> void:
 
 func _on_mute_toggled(on: bool) -> void:
 	AudioManager.set_muted(on)
+
+
+## Pixel-art lobby. Navigation retains the original menu callbacks and node paths.
+func _build_pixel_lobby() -> void:
+	_backdrop.set_scrim(0.12)
+	var shade := ColorRect.new()
+	shade.color = Color(0.035, 0.07, 0.09, 0.78)
+	shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(shade)
+	move_child(shade, 1)
+	shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var center := get_node("CenterBox") as Control
+	center.anchor_left = 0.055
+	center.anchor_right = 0.455
+	center.anchor_top = 0.08
+	center.anchor_bottom = 0.94
+	var title := get_node("CenterBox/VBox/Title") as Label
+	title.add_theme_color_override("font_color", Color("#f4dda2"))
+	var sub := get_node("CenterBox/VBox/Subtitle") as Label
+	sub.text = "集结伙伴，向地牢深处进发。"
+	sub.add_theme_color_override("font_color", Color("#c3c8b7"))
+	var gallery := VBoxContainer.new()
+	gallery.name = "PartyGallery"
+	gallery.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(gallery)
+	gallery.anchor_left = 0.53
+	gallery.anchor_right = 0.95
+	gallery.anchor_top = 0.30
+	gallery.anchor_bottom = 0.78
+	gallery.add_theme_constant_override("separation", 16)
+	var label := Label.new()
+	label.text = "冒 险 者 · 集 结"
+	label.add_theme_font_size_override("font_size", 24)
+	label.add_theme_color_override("font_color", Color("#f4dda2"))
+	gallery.add_child(label)
+	var row := HBoxContainer.new()
+	row.add_theme_constant_override("separation", 12)
+	gallery.add_child(row)
+	for a in GameData.team.slice(0, 3):
+		var frame := CardFrame.new()
+		frame.custom_minimum_size = Vector2(154, 218)
+		row.add_child(frame)
+		frame.setup(a.display_name, "等级 %d\n整装待发" % a.level, Color("#1c3038"),
+			{"image": ArtRegistry.adventurer_bust(a), "badge_l": "冒险者"})
+	var caption := Label.new()
+	caption.text = "五层地牢  /  卡牌构筑  /  小队冒险"
+	caption.add_theme_color_override("font_color", Color("#c3c8b7"))
+	gallery.add_child(caption)

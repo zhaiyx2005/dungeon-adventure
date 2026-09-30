@@ -60,7 +60,6 @@ func recruit_price(pool: int) -> int:
 func roll_recruit() -> Dictionary:
 	var a := Adventurer.new()
 	a.id = "recruit_%d" % rng.randi()
-	a.display_name = _random_name()
 	# 四属性随机分配 20 点（每项至少 3）
 	var remaining := RECRUIT_STAT_POOL
 	var stats := [3, 3, 3, 3]
@@ -72,6 +71,9 @@ func roll_recruit() -> Dictionary:
 	a.intelligence = stats[2]
 	a.vitality = stats[3]
 	a.base_luck = rng.randi_range(2, 5)
+	# 先由属性决定职业原型，再从该职业的名字池取名。
+	# 头像也使用同一个职业原型，因此名字、外观和能力倾向始终一致。
+	a.display_name = _random_name_for(ArtRegistry.archetype_of(a))
 	return {"adventurer": a, "price": recruit_price(RECRUIT_STAT_POOL)}
 
 
@@ -156,9 +158,9 @@ func _roll_special_candidate() -> Dictionary:
 	var collectible := _random_collectible()
 	var a := Adventurer.new()
 	a.id = "special_%d" % rng.randi()
-	a.display_name = _random_name()
 	_assign_stats(a, SPECIAL_STAT_POOL)
 	a.base_luck = 6
+	a.display_name = _random_name_for(ArtRegistry.archetype_of(a))
 	var price := rng.randi_range(SPECIAL_GOLD_MIN, SPECIAL_GOLD_MAX)
 	if collectible == null:
 		# 数据库没有收集品时退化为普通招募
@@ -732,10 +734,19 @@ func _assign_stats(a: Adventurer, pool: int) -> void:
 	a.vitality = stats[3]
 
 
-func _random_name() -> String:
-	var first := ["勇", "铁", "霜", "影", "血", "石", "风", "焰", "星", "夜"]
-	var last := ["剑士", "游侠", "术士", "卫士", "猎手", "斗士", "行者", "祭司"]
-	return first[rng.randi_range(0, first.size() - 1)] + last[rng.randi_range(0, last.size() - 1)]
+## 职业原型专属名字池。键与 ArtRegistry 的人物图片原型完全一致。
+const ARCHETYPE_NAMES := {
+	"warrior": ["铁卫·布兰", "佣兵·洛克", "盾手·格兰", "重甲·哈维"],
+	"arch_scholar": ["星术师·莉娅", "学者·赛琳", "秘法师·诺拉", "见习法师·艾琳"],
+	"arch_rogue": ["影刃·薇拉", "游荡者·米娅", "夜行者·凯拉", "斥候·蕾妮"],
+	"arch_priest": ["司祭·马丁", "牧师·埃文", "圣职者·奥伦", "医者·诺亚"],
+	"arch_ranger": ["游侠·艾拉", "猎手·菲恩", "弓手·罗莎", "林地守望·梅芙"],
+}
+
+
+func _random_name_for(archetype: String) -> String:
+	var names: Array = ARCHETYPE_NAMES.get(archetype, ARCHETYPE_NAMES["arch_ranger"])
+	return String(names[rng.randi_range(0, names.size() - 1)])
 
 
 func _stat_cn(key: String) -> String:

@@ -14,9 +14,9 @@ signal card_dropped(view: UnitView, card_view: Node)  ## 有卡被拖到这上�
 ## 单位卡尺寸。9-26 起加高：顶部要留一条 92px 的立绘带。
 ## 战场纵向本来就有富余（`AllyBox`/`EnemyBox` 里是两个 spacer 吸收余量），
 ## 所以加高只是吃掉 spacer，不影响其它布局。
-const UNIT_SIZE := Vector2(132, 224)
+const UNIT_SIZE := Vector2(132, 242)
 ## 顶部立绘带高度
-const ART_H := 92.0
+const ART_H := 108.0
 
 # --- 打击感参数（9-23 需求）---
 const SHAKE_DUR := 0.28         ## 受击抖动时长
@@ -185,7 +185,7 @@ func refresh() -> void:
 	if not is_node_ready():
 		return
 	if adventurer != null:
-		_apply_art(ArtRegistry.adventurer_battle(adventurer))
+		_apply_art(ArtRegistry.adventurer_bust(adventurer))
 		_refresh_adventurer()
 	elif monster != null:
 		_apply_art(ArtRegistry.monster_battle(monster))
@@ -197,6 +197,7 @@ func refresh() -> void:
 ## 否则文字上方会白白空出 97px。
 func _apply_art(tex: Texture2D) -> void:
 	_art.texture = tex
+	_art.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED if is_ally else TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	var has_art := tex != null
 	_art.visible = has_art
 	_art_bg.visible = has_art
@@ -226,7 +227,7 @@ func _refresh_adventurer() -> void:
 
 	if a.shield > 0:
 		_shield_label.text = "护盾 %d" % a.shield
-		_shield_label.add_theme_color_override("font_color", Color("#185FA5"))
+		_shield_label.add_theme_color_override("font_color", Color("#287e88"))
 	else:
 		_shield_label.text = ""
 
@@ -279,7 +280,7 @@ func _refresh_monster() -> void:
 
 	if m.shield > 0:
 		_shield_label.text = "护盾 %d" % m.shield
-		_shield_label.add_theme_color_override("font_color", Color("#185FA5"))
+		_shield_label.add_theme_color_override("font_color", Color("#287e88"))
 	else:
 		_shield_label.text = ""
 
@@ -320,21 +321,21 @@ func _apply_visual_state() -> void:
 	_bg.color = base
 	modulate = Color(1, 1, 1, 0.45) if dead else Color(1, 1, 1, 1)
 
-	var border_color := Color("#B5B3AB")
+	var border_color := Color("#aa8146")
 	var border_width := 2
 
 	if drop_highlight:
 		border_color = Color("#3B6D11")
 		border_width = 4
 	elif selected:
-		border_color = Color("#185FA5")
+		border_color = Color("#287e88")
 		border_width = 3
 
 	var sb := StyleBoxFlat.new()
 	sb.bg_color = Color(0, 0, 0, 0)
 	sb.border_color = border_color
 	sb.set_border_width_all(border_width)
-	sb.set_corner_radius_all(8)
+	sb.set_corner_radius_all(0)
 	_border.add_theme_stylebox_override("panel", sb)
 
 

@@ -50,11 +50,17 @@ const SFX_FILES := {
 	"combo": "sfx_combo.wav",
 	"victory": "sfx_victory.wav",
 	"defeat": "sfx_defeat.wav",
+	"card_draw": "sfx_card_draw.wav",
+	"card_play": "sfx_card_play.wav",
+	"map_step": "sfx_map_step.wav",
+	"reward": "sfx_reward.wav",
 }
 
 const BGM_FILES := {
 	"title": "bgm_title.wav",
 	"battle": "bgm_battle.wav",
+	"town": "bgm_town.wav",
+	"dungeon": "bgm_dungeon.wav",
 }
 
 ## 战斗表现层事件 kind → 起手音效 id
