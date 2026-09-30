@@ -7,7 +7,8 @@
 不想配环境？直接下载打包好的 Windows 免安装版：
 
 - **Gitee Releases（国内推荐，秒开）**：https://gitee.com/zhaiyx2005/dungeon-adventure/releases/tag/v1.1 （约 82 MB）
-- **GitHub Releases**：https://github.com/zhaiyx2005/dungeon-adventure/releases/latest （约 82 MB）
+- **GitHub**：https://github.com/zhaiyx2005/dungeon-adventure —— 代码镜像。
+  （GitHub 的附件下载域名在国内网络下不可达，免安装包请从上方 Gitee 下载）
 
 解压后双击 `地牢冒险记.exe` 即可开始游戏，**请保持 `地牢冒险记.pck` 与 exe 在同一目录**。
 若被 Windows SmartScreen 拦截，右键 exe → 属性 → 勾选「解除锁定」后重试。
