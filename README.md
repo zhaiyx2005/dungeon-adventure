@@ -6,8 +6,8 @@
 
 不想配环境？直接下载打包好的 Windows 免安装版：
 
-- **Gitee Releases（国内推荐，秒开）**：https://gitee.com/zhaiyx2005/dungeon-adventure/releases/tag/v1.0 （约 78 MB）
-- **GitHub Releases**：https://github.com/zhaiyx2005/dungeon-adventure/releases/latest （约 78 MB）
+- **Gitee Releases（国内推荐，秒开）**：https://gitee.com/zhaiyx2005/dungeon-adventure/releases/tag/v1.1 （约 82 MB）
+- **GitHub Releases**：https://github.com/zhaiyx2005/dungeon-adventure/releases/latest （约 82 MB）
 
 解压后双击 `地牢冒险记.exe` 即可开始游戏，**请保持 `地牢冒险记.pck` 与 exe 在同一目录**。
 若被 Windows SmartScreen 拦截，右键 exe → 属性 → 勾选「解除锁定」后重试。
@@ -300,6 +300,24 @@ PY=C:/Users/20601/.workbuddy/binaries/python/versions/3.13.12/python.exe
 | `unique_name_in_owner` 漏配 = 静默功能缺失 | `%Foo` 拿到 null，只 push 一个 ERROR |
 
 更多细节见 `docs/` 下各文档，以及 `HANDOFF.md`。
+
+---
+
+## 更新日志
+
+### v1.1 — 音频系统扩充 + 界面改版
+
+- **BGM**：新增城镇、地牢两条场景音乐，场景切换时自动跟随
+- **音效**：新增抽牌、出牌、地图移动、奖励结算四组音效，战斗节奏反馈补齐
+- **像素立绘**：接入 `portraits_pixel_v2.png` 图集，冒险者与职业原型统一使用像素半身像；
+  人物卡新增像素卡框
+- **主菜单**：改版为像素大厅，快速战斗入口文案细化为「新手地穴 · 第 1 层」
+- **本地化**：冒险者职业原型支持中文名显示（战士 / 法师 / 盗贼 / 牧师 / 游侠）
+- **表现调整**：战斗单位尺寸统一、场景背景层调整
+
+### v1.0 — 首个全流程可玩版本
+
+开屏 → 主菜单 → 城镇 → 5 层地牢 → 战斗 → 结算 → 回城，含 54 卡 / 67 物品 / 26 怪物 / 10 栏位存档。
 
 ---
 
